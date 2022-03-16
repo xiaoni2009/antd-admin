@@ -8,6 +8,7 @@ package-lock.json
 
 # ide
 .idea
+.history
 
 # Mac General
 .DS_Store
