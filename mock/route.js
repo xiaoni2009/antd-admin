@@ -28,6 +28,18 @@ const database = [
     route: '/user',
   },
   {
+    id: '100',
+    icon: 'dashboard',
+    name: 'Home',
+    zh: {
+      name: '主页'
+    },
+    'pt-br': {
+      name: 'Home'
+    },
+    route: '/home',
+  },
+  {
     id: '7',
     breadcrumbParentId: '1',
     name: 'Posts',
