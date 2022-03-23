@@ -12,6 +12,8 @@ import {
   LineOutlined,
   BarChartOutlined,
   AreaChartOutlined,
+  ReadOutlined,
+  BankOutlined
 } from '@ant-design/icons'
 
 export default {
@@ -28,4 +30,6 @@ export default {
   user: <UserOutlined />,
   api: <ApiOutlined />,
   edit: <EditOutlined />,
+  article: <ReadOutlined />,
+  home: <BankOutlined />,
 }

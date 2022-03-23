@@ -29,7 +29,7 @@ const database = [
   },
   {
     id: '100',
-    icon: 'dashboard',
+    icon: 'home',
     name: 'Home',
     zh: {
       name: '主页'
@@ -38,6 +38,18 @@ const database = [
       name: 'Home'
     },
     route: '/home',
+  },
+  {
+    id: '101',
+    icon: 'article',
+    name: 'Article',
+    zh: {
+      name: '文章'
+    },
+    'pt-br': {
+      name: 'Article'
+    },
+    route: '/article',
   },
   {
     id: '7',

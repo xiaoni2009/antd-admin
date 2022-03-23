@@ -1,5 +1,7 @@
 {
   "/dashboard": "/dashboard",
+  "/home": "/home",
+  "/article": "/article",
   "Add Param": "Add Parametro",
   "Address": "Endereço",
   "Age": "Ano",
