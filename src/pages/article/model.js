@@ -20,7 +20,7 @@ export default modelExtend(pageModel, {
   subscriptions: {
     setup({ dispatch, history }) {
       history.listen(location => {
-        if (pathToRegexp('/user').exec(location.pathname)) {
+        if (pathToRegexp('/article').exec(location.pathname)) {
           const payload = location.query || { page: 1, pageSize: 10 }
           dispatch({
             type: 'query',
@@ -33,7 +33,8 @@ export default modelExtend(pageModel, {
 
   effects: {
     *query({ payload = {} }, { call, put }) {
-      const data = yield call(queryUserList, payload)
+      const data = yield call(  queryUserList, payload)
+      console.log(data)
       if (data) {
         yield put({
           type: 'querySuccess',
@@ -47,16 +48,6 @@ export default modelExtend(pageModel, {
           },
         })
       }
-    },
-  },
-
-  reducers: {
-    showModal(state, { payload }) {
-      return { ...state, ...payload, modalVisible: true }
-    },
-
-    hideModal(state) {
-      return { ...state, modalVisible: false }
     },
   },
 })

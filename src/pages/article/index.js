@@ -28,38 +28,6 @@ class Article extends PureComponent {
     })
   }
 
-  get modalProps() {
-    const { dispatch, user, loading } = this.props
-    const { currentItem, modalVisible, modalType } = user
-
-    console.log(this.props)
-
-    return {
-      item: modalType === 'create' ? {} : currentItem,
-      visible: modalVisible,
-      destroyOnClose: true,
-      maskClosable: false,
-      confirmLoading: loading.effects[`user/${modalType}`],
-      title: `${
-        modalType === 'create' ? t`Create User` : t`Update User`
-      }`,
-      centered: true,
-      onOk: data => {
-        dispatch({
-          type: `user/${modalType}`,
-          payload: data,
-        }).then(() => {
-          this.handleRefresh()
-        })
-      },
-      onCancel() {
-        dispatch({
-          type: 'user/hideModal',
-        })
-      },
-    }
-  }
-
   get listProps() {
     const { dispatch, user, loading } = this.props
     const { list, pagination, selectedRowKeys } = user
