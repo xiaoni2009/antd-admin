@@ -4,7 +4,7 @@ import api from 'api'
 import { pageModel } from 'utils/model'
 
 const {
-  queryUserList,
+  queryArticle,
 } = api
 
 export default modelExtend(pageModel, {
@@ -33,17 +33,18 @@ export default modelExtend(pageModel, {
 
   effects: {
     *query({ payload = {} }, { call, put }) {
-      const data = yield call(  queryUserList, payload)
+      console.log(queryArticle)
+      const data = yield call(  queryArticle, payload)
       console.log(data)
-      if (data) {
+      if (data && data.success) {
         yield put({
           type: 'querySuccess',
           payload: {
-            list: data.data,
+            list: data.data.list,
             pagination: {
-              current: Number(payload.page) || 1,
-              pageSize: Number(payload.pageSize) || 10,
-              total: data.total,
+              current: Number(data.data.pageNum) || 1,
+              pageSize: Number(data.data.pageSize) || 10,
+              total: data.data.total,
             },
           },
         })

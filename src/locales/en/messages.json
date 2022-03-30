@@ -52,5 +52,8 @@
   "Username": "Username",
   "Views": "Views",
   "Visibility": "Visibility",
-  "You have viewed all notifications.": "You have viewed all notifications."
+  "You have viewed all notifications.": "You have viewed all notifications.",
+  "articleName" : "Title",
+  "articleOrinUrl": "Url",
+  "mainContext": "Content"
 }

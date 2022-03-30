@@ -12,7 +12,8 @@ export default function request(options) {
   const cloneData = cloneDeep(data)
 
   try {
-    let domain = ''
+    //设置后端的域名domain，注意如果domain和前端域名一样，就会替换后端端口号为domain的，如果域名不一样，会把domain拼接在前端的域名后面
+    let domain = 'http://localhost:8090'
     const urlMatch = url.match(/[a-zA-z]+:\/\/[^/]*/)
     if (urlMatch) {
       ;[domain] = urlMatch

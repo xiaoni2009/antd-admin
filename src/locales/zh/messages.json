@@ -54,5 +54,8 @@
   "Username": "用户名",
   "Views": "浏览数",
   "Visibility": "可见性",
-  "You have viewed all notifications.": "您已查看所有通知"
+  "You have viewed all notifications.": "您已查看所有通知",
+  "articleName" : "标题",
+  "articleOrinUrl": "链接",
+  "mainContext": "内容"
 }

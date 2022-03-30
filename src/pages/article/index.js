@@ -10,7 +10,8 @@ import List from './components/List'
 import Filter from './components/Filter'
 import Modal from './components/Modal'
 
-@connect(({ user, loading }) => ({ user, loading }))
+//这里的名字article要和model.js里面的namespace一致
+@connect(({ article, loading }) => ({ article, loading }))
 class Article extends PureComponent {
   handleRefresh = newQuery => {
     const { location } = this.props
@@ -29,12 +30,12 @@ class Article extends PureComponent {
   }
 
   get listProps() {
-    const { dispatch, user, loading } = this.props
-    const { list, pagination, selectedRowKeys } = user
+    const { dispatch, article, loading } = this.props
+    const { list, pagination, selectedRowKeys } = article
 
     return {
       dataSource: list,
-      loading: loading.effects['user/query'],
+      loading: loading.effects['article/query'],
       pagination,
       onChange: page => {
         this.handleRefresh({
@@ -57,7 +58,7 @@ class Article extends PureComponent {
   }
 
   render() {
-    const { user } = this.props
+    const { article } = this.props
 
     return (
       <Page inner>
@@ -70,7 +71,7 @@ class Article extends PureComponent {
 }
 
 Article.propTypes = {
-  user: PropTypes.object,
+  article: PropTypes.object,
   location: PropTypes.object,
   dispatch: PropTypes.func,
   loading: PropTypes.object,

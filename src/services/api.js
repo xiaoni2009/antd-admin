@@ -16,5 +16,5 @@ export default {
 
   queryDashboard: '/dashboard',
   queryHome: '/home',
-  queryArticle: '/article',
+  queryArticle: '/articles/page',
 }

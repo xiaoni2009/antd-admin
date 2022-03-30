@@ -29,52 +29,52 @@ class List extends PureComponent {
     const { onDeleteItem, onEditItem, ...tableProps } = this.props
 
     const columns = [
+      // {
+      //   title: <Trans>Avatar</Trans>,
+      //   dataIndex: 'avatar',
+      //   key: 'avatar',
+      //   width: '7%',
+      //   fixed: 'left',
+      //   render: text => <Avatar style={{ marginLeft: 8 }} src={text} />,
+      // },
       {
-        title: <Trans>Avatar</Trans>,
-        dataIndex: 'avatar',
-        key: 'avatar',
-        width: '7%',
-        fixed: 'left',
-        render: text => <Avatar style={{ marginLeft: 8 }} src={text} />,
+        title: <Trans>articleName</Trans>,
+        dataIndex: 'articleName',
+        key: 'articleName',
       },
       {
-        title: <Trans>Name</Trans>,
-        dataIndex: 'name',
-        key: 'name',
-        render: (text, record) => <Link to={`user/${record.id}`}>{text}</Link>,
+        title: <Trans>articleOrinUrl</Trans>,
+        dataIndex: 'articleOrinUrl',
+        key: 'articleOrinUrl',
+        render: (text, record) => <Link to={text}>{text}</Link>,
       },
+      // {
+      //   title: <Trans>Age</Trans>,
+      //   dataIndex: 'age',
+      //   width: '6%',
+      //   key: 'age',
+      // },
+      // {
+      //   title: <Trans>Gender</Trans>,
+      //   dataIndex: 'isMale',
+      //   key: 'isMale',
+      //   width: '7%',
+      //   render: text => <span>{text ? 'Male' : 'Female'}</span>,
+      // },
+      // {
+      //   title: <Trans>Phone</Trans>,
+      //   dataIndex: 'phone',
+      //   key: 'phone',
+      // },
+      // {
+      //   title: <Trans>Email</Trans>,
+      //   dataIndex: 'email',
+      //   key: 'email',
+      // },
       {
-        title: <Trans>NickName</Trans>,
-        dataIndex: 'nickName',
-        key: 'nickName',
-      },
-      {
-        title: <Trans>Age</Trans>,
-        dataIndex: 'age',
-        width: '6%',
-        key: 'age',
-      },
-      {
-        title: <Trans>Gender</Trans>,
-        dataIndex: 'isMale',
-        key: 'isMale',
-        width: '7%',
-        render: text => <span>{text ? 'Male' : 'Female'}</span>,
-      },
-      {
-        title: <Trans>Phone</Trans>,
-        dataIndex: 'phone',
-        key: 'phone',
-      },
-      {
-        title: <Trans>Email</Trans>,
-        dataIndex: 'email',
-        key: 'email',
-      },
-      {
-        title: <Trans>Address</Trans>,
-        dataIndex: 'address',
-        key: 'address',
+        title: <Trans>mainContext</Trans>,
+        dataIndex: 'mainContext',
+        key: 'mainContext',
       },
       {
         title: <Trans>CreateTime</Trans>,
